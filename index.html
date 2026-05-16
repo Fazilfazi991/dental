@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dentiva Dental Clinic | Exceptional Care, Confident Smiles</title>
+    <meta
+      name="description"
+      content="Dentiva Dental Clinic in Dubai offering general dentistry, cosmetic dentistry, orthodontics, implants, pediatric dentistry, gum care, oral surgery, and prosthodontics."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-strip">
+      <span>Dubai, UAE</span>
+      <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+      <a href="tel:+971501234567">Call Now: +971 50 123 4567</a>
+      <a href="https://wa.me/971501234567">WhatsApp</a>
+      <a class="strip-cta" href="#book">Book Appointment</a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Dentiva Dental Clinic home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 76" focusable="false">
+            <path d="M13 11 28 19 51 8 58 23 48 67 34 46 28 70 17 69 6 24Z" />
+            <path d="M22 22 39 15" />
+            <path d="M22 68 26 43" />
+            <path d="M45 65 42 41" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Dentiva</strong>
+          <small>Dental Clinic</small>
+          <em>Exceptional Care, Confident Smiles</em>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="active" href="#top">Home</a>
+        <a href="#why">About</a>
+        <a href="#services">Services</a>
+        <a href="#team">Doctors</a>
+        <a href="#gallery">Smile Gallery</a>
+        <a href="#visit">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Dentiva Dental Clinic">
+        <img src="assets/dentiva-hero-patient-opt.jpg" alt="Smiling dental patient during a gentle checkup" />
+        <div class="hero-shade"></div>
+        <div class="hero-inner">
+          <div class="hero-copy-block">
+            <h1>Exceptional Dental Care <span>for Confident Smiles</span></h1>
+            <p>
+              Advanced dental treatments, expert dentists, and modern technology in one place.
+              Personalized care for a healthier, brighter smile that lasts a lifetime.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#book">Book Appointment</a>
+              <a class="button secondary" href="https://wa.me/971501234567">WhatsApp Us</a>
+            </div>
+            <div class="hero-badges" aria-label="Clinic highlights">
+              <span><b>01</b> Experienced Dentists</span>
+              <span><b>02</b> Modern Equipment</span>
+              <span><b>03</b> Family Friendly</span>
+              <span><b>04</b> Emergency Support</span>
+            </div>
+          </div>
+
+          <form class="hero-form" id="book" aria-label="Book your appointment">
+            <h2>Book Your Appointment</h2>
+            <label>
+              Full Name
+              <input type="text" name="name" placeholder="Your Name" autocomplete="name" required />
+            </label>
+            <label>
+              Phone Number
+              <input type="tel" name="phone" placeholder="+971 50 123 4567" autocomplete="tel" required />
+            </label>
+            <label>
+              Select Service
+              <select name="service" required>
+                <option value="">Select a Service</option>
+                <option>Dental consultation & check-up</option>
+                <option>Scaling & polishing</option>
+                <option>Teeth whitening</option>
+                <option>Root canal treatment</option>
+                <option>Braces / clear aligners</option>
+                <option>Dental implants</option>
+                <option>Pediatric dentistry</option>
+              </select>
+            </label>
+            <button class="button primary" type="submit">Request a Call</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="section services reveal" id="services">
+        <div class="section-title centered">
+          <h2>Our Dental Services</h2>
+          <p>Comprehensive care for every smile. Advanced treatments. Gentle approach.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card dark-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M21 10c5 0 7 4 11 4s6-4 11-4c8 0 13 7 11 16l-6 23c-1 4-6 5-8 1l-4-10c-1-3-7-3-8 0l-4 10c-2 4-7 3-8-1l-6-23C8 17 13 10 21 10Z"/><path d="M45 9v8M41 13h8M50 19v6M47 22h6"/></svg>
+            </span>
+            <span class="service-number">01</span>
+            <h3>General Dentistry</h3>
+            <ul>
+              <li>Dental consultation & check-up</li>
+              <li>Scaling & polishing</li>
+              <li>Teeth cleaning</li>
+              <li>Tooth-colored fillings</li>
+              <li>Fluoride treatment</li>
+              <li>Tooth extractions</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M18 18c0-6 4-10 10-10 2 0 5 2 8 2s6-2 8-2c6 0 10 4 10 10 0 5-4 9-5 14l-3 17c-1 5-7 6-9 1l-3-8c-1-3-5-3-6 0l-3 8c-2 5-8 4-9-1l-3-17c-1-5-5-9-5-14Z"/><path d="M20 20h28M24 27h20"/></svg>
+            </span>
+            <span class="service-number">02</span>
+            <h3>Restorative Dentistry</h3>
+            <ul>
+              <li>Root canal treatment</li>
+              <li>Dental crowns</li>
+              <li>Dental bridges</li>
+              <li>Partial/full dentures</li>
+              <li>Post & core build-up</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M21 12c5 0 7 4 11 4s6-4 11-4c8 0 13 7 11 16l-5 20c-1 5-7 6-9 1l-4-9c-1-3-7-3-8 0l-4 9c-2 5-8 4-9-1l-5-20c-2-9 3-16 11-16Z"/><path d="M48 6v8M44 10h8M53 18v6M50 21h6"/></svg>
+            </span>
+            <span class="service-number">03</span>
+            <h3>Cosmetic Dentistry</h3>
+            <ul>
+              <li>Teeth whitening</li>
+              <li>Porcelain laminate veneers</li>
+              <li>Smile designing / smile makeover</li>
+              <li>Composite bonding</li>
+              <li>Hollywood smile</li>
+            </ul>
+          </article>
+          <article class="service-card dark-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M13 28h38"/><path d="M18 22h8v12h-8zM30 22h8v12h-8zM42 22h8v12h-8z"/><path d="M10 22c4 0 4 12 8 12M54 22c-4 0-4 12-8 12"/></svg>
+            </span>
+            <span class="service-number">04</span>
+            <h3>Orthodontics</h3>
+            <ul>
+              <li>Braces</li>
+              <li>Clear aligners</li>
+              <li>Space closure</li>
+              <li>Teeth alignment correction</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M25 9c4 0 5 3 7 3s3-3 7-3c6 0 10 5 9 12l-4 15c-1 3-4 4-6 2l-2-3c-2-3-6-3-8 0l-2 3c-2 2-5 1-6-2l-4-15C15 14 19 9 25 9Z"/><path d="M28 39h8M29 44h6M30 49h4M31 54h2"/></svg>
+            </span>
+            <span class="service-number">05</span>
+            <h3>Implant Dentistry</h3>
+            <ul>
+              <li>Dental implants</li>
+              <li>Implant crowns</li>
+              <li>Full mouth rehabilitation with implants</li>
+              <li>Bone grafting</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><circle cx="32" cy="33" r="18"/><path d="M20 31c-5 0-8-3-8-7 0-5 5-8 10-6M44 18c5-2 10 1 10 6 0 4-3 7-8 7"/><path d="M25 36c2 3 12 3 14 0M24 29h.1M40 29h.1"/><path d="M31 12v-5M27 9h8"/></svg>
+            </span>
+            <span class="service-number">06</span>
+            <h3>Pediatric Dentistry</h3>
+            <ul>
+              <li>Kids dental check-up</li>
+              <li>Preventive treatments</li>
+              <li>Fluoride & sealants</li>
+              <li>Pediatric fillings/extractions</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M20 13c5 0 7 4 12 4s7-4 12-4c7 0 11 6 10 14l-5 21c-1 5-7 6-9 1l-4-10c-1-3-7-3-8 0l-4 10c-2 5-8 4-9-1l-5-21c-1-8 3-14 10-14Z"/><path d="M16 43c7-6 25-6 32 0"/></svg>
+            </span>
+            <span class="service-number">07</span>
+            <h3>Periodontics</h3>
+            <ul>
+              <li>Deep cleaning</li>
+              <li>Gum treatment</li>
+              <li>Scaling & root planing</li>
+              <li>Gum surgery</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M22 11c5 0 6 4 10 4s5-4 10-4c7 0 11 6 10 13l-5 25c-1 5-7 6-9 1l-3-9c-1-3-5-3-6 0l-3 9c-2 5-8 4-9-1l-5-25c-1-7 3-13 10-13Z"/><path d="M21 49h22M24 54h16"/></svg>
+            </span>
+            <span class="service-number">08</span>
+            <h3>Oral Surgery</h3>
+            <ul>
+              <li>Wisdom tooth extraction</li>
+              <li>Surgical extractions</li>
+              <li>Minor oral surgeries</li>
+            </ul>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">
+              <svg viewBox="0 0 64 64"><path d="M12 30h40v12H12z"/><path d="M17 30v-8c0-4 3-7 7-7s7 3 7 7v8M33 30v-8c0-4 3-7 7-7s7 3 7 7v8"/><path d="M18 42v8M28 42v8M38 42v8M48 42v8"/></svg>
+            </span>
+            <span class="service-number">09</span>
+            <h3>Prosthodontics</h3>
+            <ul>
+              <li>Zirconia crowns</li>
+              <li>E-max veneers/crowns</li>
+              <li>Full & partial dentures</li>
+            </ul>
+          </article>
+        </div>
+        <div class="service-benefits" aria-label="Service highlights">
+          <article>
+            <span aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 8 52 16v15c0 13-8 21-20 25-12-4-20-12-20-25V16Z"/><path d="m23 32 6 6 13-15"/></svg></span>
+            <div>
+              <h3>Advanced Technology</h3>
+              <p>State-of-the-art equipment for precise and comfortable care.</p>
+            </div>
+          </article>
+          <article>
+            <span aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M22 34c-8 0-12 5-12 11v8h18l4-8 4 8h18v-8c0-6-4-11-12-11"/><path d="M20 24c0-7 5-12 12-12s12 5 12 12-5 12-12 12-12-5-12-12Z"/><path d="M22 46h20"/></svg></span>
+            <div>
+              <h3>Patient First Approach</h3>
+              <p>Your comfort, safety, and smile are our top priorities.</p>
+            </div>
+          </article>
+          <article>
+            <span aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 7 39 21l15 2-11 11 3 15-14-7-14 7 3-15-11-11 15-2Z"/><circle cx="32" cy="31" r="7"/></svg></span>
+            <div>
+              <h3>Experienced Specialists</h3>
+              <p>Highly skilled team with years of clinical expertise.</p>
+            </div>
+          </article>
+          <article>
+            <span aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 18h36v34H14z"/><path d="M14 27h36M23 12v10M41 12v10"/><path d="M22 35h4M30 35h4M38 35h4M22 43h4M30 43h4M38 43h4"/></svg></span>
+            <div>
+              <h3>Flexible Appointments</h3>
+              <p>Convenient scheduling to fit your busy lifestyle.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section process reveal" aria-label="Patient journey">
+        <div class="section-title centered">
+          <h2>Your Visit, Step by Step</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <span>01</span>
+            <h3>Consultation</h3>
+            <p>We listen to your concern, review your oral health, and answer every question.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Digital Diagnosis</h3>
+            <p>Modern imaging and clinical checks help us plan treatment clearly and precisely.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Treatment Plan</h3>
+            <p>You receive a transparent plan with options, timing, and expected results.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Confident Smile</h3>
+            <p>Gentle care, premium materials, and follow-up guidance keep your smile healthy.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="why reveal" id="why">
+        <div class="why-content">
+          <div class="section-title">
+            <p class="eyebrow">Why Choose Dentiva</p>
+            <h2>Why Choose Dentiva</h2>
+          </div>
+          <p>
+            We combine advanced technology with compassionate care to deliver exceptional dental
+            experiences in a calm, hygienic, patient-friendly space.
+          </p>
+          <div class="why-actions">
+            <a class="button primary" href="#book">Book an Appointment</a>
+            <a class="watch-link" href="#gallery">Watch Smile Results</a>
+          </div>
+          <div class="why-points">
+            <article>
+              <b aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M14 16h36v28H14z"/><path d="M22 50h20M28 44v6M36 44v6"/><path d="M26 24c3 0 4 2 6 2s3-2 6-2c4 0 7 4 6 8l-2 8c-1 3-4 3-5 0l-1-3c-1-2-5-2-6 0l-1 3c-1 3-4 3-5 0l-2-8c-1-4 2-8 6-8Z"/></svg></b>
+              <h3>Advanced Technology</h3>
+              <p>Modern tools for accurate diagnosis and comfortable care.</p>
+            </article>
+            <article>
+              <b aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="22" r="9"/><path d="M17 52v-5c0-8 6-14 15-14s15 6 15 14v5"/><path d="M24 42h16"/></svg></b>
+              <h3>Expert Dentists</h3>
+              <p>Experienced professionals dedicated to your smile goals.</p>
+            </article>
+            <article>
+              <b aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M19 40h24c5 0 9-4 9-9V17"/><path d="M15 40v10M47 40v10"/><path d="M22 28h14l4 12H18Z"/><path d="M46 15c4 0 7 3 7 7"/></svg></b>
+              <h3>Comfortable Clinic</h3>
+              <p>Relaxing, clean, and designed around patient comfort.</p>
+            </article>
+            <article>
+              <b aria-hidden="true"><svg viewBox="0 0 64 64"><path d="M32 52s-18-10-22-24c-2-8 3-14 10-14 5 0 9 3 12 8 3-5 7-8 12-8 7 0 12 6 10 14-4 14-22 24-22 24Z"/></svg></b>
+              <h3>Personalized Care</h3>
+              <p>Treatment plans tailored to your needs and confidence.</p>
+            </article>
+          </div>
+        </div>
+        <img src="assets/clinic-hero-opt.jpg" alt="Modern Dentiva clinic reception interior" />
+      </section>
+
+      <section class="section featured reveal" id="gallery">
+        <div class="section-title">
+          <h2>Featured Treatments</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <img src="assets/treatment-implants.png" alt="Dental implant treatment model" />
+            <h3>Dental Implants</h3>
+            <p>Restore function and confidence with long-lasting solutions.</p>
+          </article>
+          <article>
+            <img src="assets/treatment-veneers.png" alt="Natural smile with porcelain veneers" />
+            <h3>Veneers</h3>
+            <p>Perfect your smile with natural-looking veneers.</p>
+          </article>
+          <article>
+            <img src="assets/treatment-aligners.png" alt="Smile with clear aligner treatment" />
+            <h3>Braces / Clear Aligners</h3>
+            <p>Straighten your teeth discreetly and effectively.</p>
+          </article>
+          <article>
+            <img src="assets/treatment-whitening.png" alt="Bright smile after teeth whitening" />
+            <h3>Teeth Whitening</h3>
+            <p>Brighten your smile safely and effectively.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-row reveal">
+        <div id="team">
+          <div class="section-title">
+            <h2>Meet Our Dental Experts</h2>
+          </div>
+          <div class="doctor-grid">
+            <article class="doctor-card">
+              <img class="doctor-photo" src="assets/doctor-ahmed-opt.jpg" alt="Dr. Ahmed Al Mansoori" />
+              <h3>Dr. Ahmed Al Mansoori</h3>
+              <p>Cosmetic Dentist</p>
+              <small>Expert in smile design and aesthetic dentistry.</small>
+            </article>
+            <article class="doctor-card">
+              <img class="doctor-photo" src="assets/doctor-sara-opt.jpg" alt="Dr. Sara Al Hashimi" />
+              <h3>Dr. Sara Al Hashimi</h3>
+              <p>Orthodontist</p>
+              <small>Specialist in braces, aligners, and smile transformation.</small>
+            </article>
+            <article class="doctor-card">
+              <img class="doctor-photo" src="assets/doctor-khalid-opt.jpg" alt="Dr. Khalid Al Nuaimi" />
+              <h3>Dr. Khalid Al Nuaimi</h3>
+              <p>Implantologist</p>
+              <small>Expert in dental implants and full mouth rehabilitation.</small>
+            </article>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-title centered">
+            <h2>Patient Testimonials</h2>
+          </div>
+          <div class="testimonial-grid">
+            <article>
+              <span>5.0 / 5</span>
+              <p>"Amazing experience. The team is professional and the clinic feels premium."</p>
+              <strong>Aisha R.</strong>
+            </article>
+            <article>
+              <span>5.0 / 5</span>
+              <p>"State-of-the-art clinic with excellent dentists. Highly recommended."</p>
+              <strong>Omar K.</strong>
+            </article>
+            <article>
+              <span>5.0 / 5</span>
+              <p>"Very comfortable and painless treatment. Great results and friendly staff."</p>
+              <strong>Fatima L.</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="consultation reveal">
+        <div>
+          <h2>Book Your Consultation Today</h2>
+          <p>Take the first step towards a healthier, more beautiful smile.</p>
+        </div>
+        <a class="button secondary light" href="tel:+971501234567">Call Now +971 50 123 4567</a>
+        <a class="button primary" href="#book">Book Appointment</a>
+      </section>
+
+      <section class="visit reveal" id="visit">
+        <div>
+          <a class="brand footer-brand" href="#top" aria-label="Dentiva Dental Clinic home">
+            <span class="brand-mark" aria-hidden="true">
+              <svg viewBox="0 0 64 76" focusable="false">
+                <path d="M13 11 28 19 51 8 58 23 48 67 34 46 28 70 17 69 6 24Z" />
+                <path d="M22 22 39 15" />
+                <path d="M22 68 26 43" />
+                <path d="M45 65 42 41" />
+              </svg>
+            </span>
+            <span class="brand-text">
+              <strong>Dentiva</strong>
+              <small>Dental Clinic</small>
+            </span>
+          </a>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="#top">Home</a>
+          <a href="#why">About Us</a>
+          <a href="#services">Our Services</a>
+          <a href="#team">Our Doctors</a>
+        </div>
+        <div>
+          <h3>Our Services</h3>
+          <a href="#services">General Dentistry</a>
+          <a href="#services">Cosmetic Dentistry</a>
+          <a href="#services">Orthodontics</a>
+          <a href="#services">Implant Dentistry</a>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p>Al Wasl Road, Jumeirah 1, Dubai, UAE</p>
+          <p>+971 50 123 4567</p>
+          <p>info@dentiva.ae</p>
+          <p>Mon - Sat: 9:00 AM - 8:00 PM</p>
+          <div class="map-card">Dentiva Dental Clinic</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>(c) 2026 Dentiva Dental Clinic. All Rights Reserved.</p>
+      <p>Privacy Policy | Terms & Conditions</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
