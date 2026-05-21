@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Dentiva Clinic | Book Appointment</title>
+    <meta
+      name="description"
+      content="Contact Dentiva Clinic in Dubai to book a dental appointment, call, WhatsApp, or request a consultation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-strip">
+      <span>Dubai, UAE</span>
+      <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+      <a href="tel:+971501234567">Call Now: +971 50 123 4567</a>
+      <a href="https://wa.me/971501234567">WhatsApp</a>
+      <a class="strip-cta" href="#appointment">Book Appointment</a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dentiva Dental Clinic home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 76" focusable="false">
+            <path d="M13 11 28 19 51 8 58 23 48 67 34 46 28 70 17 69 6 24Z" />
+            <path d="M22 22 39 15" />
+            <path d="M22 68 26 43" />
+            <path d="M45 65 42 41" />
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Dentiva</strong>
+          <small>Dental Clinic</small>
+          <em>Exceptional Care, Confident Smiles</em>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="index.html#team">Doctors</a>
+        <a href="index.html#gallery">Smile Gallery</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero contact-page-hero">
+        <div>
+          <p class="eyebrow">Contact Us</p>
+          <h1>Book your visit with Dentiva Clinic.</h1>
+          <p>
+            Reach our team for appointments, treatment guidance, and general dental enquiries. We
+            are here to make your visit smooth from the first call.
+          </p>
+        </div>
+      </section>
+
+      <section class="section contact-layout reveal" id="appointment">
+        <div class="contact-card">
+          <p class="eyebrow">Clinic Details</p>
+          <h2>Visit Dentiva Clinic</h2>
+          <div class="contact-list">
+            <article>
+              <strong>Address</strong>
+              <span>Al Wasl Road, Jumeirah 1, Dubai, UAE</span>
+            </article>
+            <article>
+              <strong>Phone</strong>
+              <a href="tel:+971501234567">+971 50 123 4567</a>
+            </article>
+            <article>
+              <strong>Email</strong>
+              <a href="mailto:info@dentiva.ae">info@dentiva.ae</a>
+            </article>
+            <article>
+              <strong>Working Hours</strong>
+              <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+            </article>
+          </div>
+          <div class="map-card contact-map">Dentiva Dental Clinic</div>
+        </div>
+
+        <form class="contact-form" aria-label="Appointment request form">
+          <h2>Request an Appointment</h2>
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Your Name" autocomplete="name" required />
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" name="phone" placeholder="+971 50 123 4567" autocomplete="tel" required />
+          </label>
+          <label>
+            Service
+            <select name="service" required>
+              <option value="">Select a Service</option>
+              <option>Dental consultation & check-up</option>
+              <option>Teeth whitening</option>
+              <option>Root canal treatment</option>
+              <option>Braces / clear aligners</option>
+              <option>Dental implants</option>
+              <option>Pediatric dentistry</option>
+            </select>
+          </label>
+          <label>
+            Preferred Date
+            <input type="date" name="date" />
+          </label>
+          <label class="full-field">
+            Message
+            <textarea name="message" rows="4" placeholder="Tell us how we can help"></textarea>
+          </label>
+          <button class="button primary" type="submit">Send Request</button>
+        </form>
+      </section>
+    </main>
+
+    <nav class="mobile-actions" aria-label="Mobile quick actions">
+      <a href="tel:+971501234567">Call</a>
+      <a href="https://wa.me/971501234567">WhatsApp</a>
+      <a href="#appointment">Book</a>
+    </nav>
+
+    <footer class="site-footer">
+      <p>(c) 2026 Dentiva Dental Clinic. All Rights Reserved.</p>
+      <p>Privacy Policy | Terms & Conditions</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
