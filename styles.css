@@ -225,6 +225,12 @@ div[id] {
     url("assets/treatment-implants.png") center / cover;
 }
 
+.doctors-page-hero {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 48%, rgba(255, 255, 255, 0.36) 100%),
+    url("assets/clinic-hero-opt.jpg") center right / cover;
+}
+
 .contact-page-hero {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 48%, rgba(255, 255, 255, 0.36) 100%),
@@ -347,8 +353,9 @@ p {
 }
 
 .hero-badges {
-  flex-wrap: wrap;
-  max-width: 560px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 520px;
   margin-top: 22px;
   background: rgba(255, 255, 255, 0.86);
   border: 1px solid var(--line);
@@ -358,18 +365,23 @@ p {
 
 .hero-badges span {
   display: flex;
-  min-width: 126px;
+  min-width: 0;
   align-items: center;
   gap: 10px;
   padding: 14px;
   color: var(--navy);
   border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
   font-size: 0.82rem;
   font-weight: 700;
 }
 
-.hero-badges span:last-child {
+.hero-badges span:nth-child(2n) {
   border-right: 0;
+}
+
+.hero-badges span:nth-child(n + 3) {
+  border-bottom: 0;
 }
 
 .hero-badges b,
@@ -1167,7 +1179,7 @@ textarea {
 
 .doctor-achievements {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
   margin-top: 14px;
 }
@@ -1192,6 +1204,30 @@ textarea {
   color: var(--muted);
   font-size: 0.82rem;
   line-height: 1.55;
+}
+
+.team-link {
+  margin-top: 18px;
+}
+
+.doctor-directory .doctor-photo {
+  height: 230px;
+}
+
+.achievements-page {
+  padding-top: 10px;
+}
+
+.achievements-row {
+  width: min(1060px, 100%);
+  margin: 0 auto;
+}
+
+.achievements-row article {
+  min-height: 150px;
+  padding: 24px;
+  border-color: rgba(211, 154, 50, 0.26);
+  box-shadow: 0 14px 34px rgba(6, 38, 90, 0.07);
 }
 
 .testimonial-grid article {
@@ -1533,12 +1569,17 @@ textarea {
 
   .hero-badges {
     display: grid;
+    grid-template-columns: 1fr;
     margin-top: 18px;
   }
 
   .hero-badges span {
     min-width: 0;
     border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-badges span:nth-child(n + 3) {
     border-bottom: 1px solid var(--line);
   }
 
