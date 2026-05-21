@@ -715,6 +715,24 @@ textarea {
   margin: 12px 0 12px;
 }
 
+.service-card.pediatric-card {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 249, 238, 0.94)),
+    #ffffff;
+  border-color: rgba(211, 154, 50, 0.42);
+  box-shadow: 0 18px 42px rgba(211, 154, 50, 0.14);
+}
+
+.service-card.pediatric-card .service-icon {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+  border-color: transparent;
+}
+
+.service-card.pediatric-card h3 {
+  color: var(--gold-dark);
+}
+
 .service-card.dark-card h3 {
   color: #ffffff;
 }
@@ -833,13 +851,99 @@ textarea {
   line-height: 1.5;
 }
 
+.kids-focus {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: stretch;
+  padding-top: 18px;
+}
+
+.kids-copy {
+  padding: clamp(24px, 4vw, 42px);
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(3, 27, 67, 0.96), rgba(6, 38, 90, 0.94)),
+    var(--navy-dark);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.kids-copy h2 {
+  color: #ffffff;
+}
+
+.kids-copy p:not(.eyebrow) {
+  margin: 16px 0 0;
+  color: #dbe6f5;
+  line-height: 1.7;
+}
+
+.kids-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.kids-care-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.kids-care-grid article {
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 14px 36px rgba(6, 38, 90, 0.08);
+}
+
+.kids-care-grid span {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 18px;
+  place-items: center;
+  color: var(--gold-dark);
+  background: #fff8eb;
+  border: 1px solid rgba(211, 154, 50, 0.28);
+  border-radius: 50%;
+}
+
+.kids-care-grid svg {
+  width: 34px;
+  height: 34px;
+}
+
+.kids-care-grid path,
+.kids-care-grid circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.5;
+}
+
+.kids-care-grid h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+}
+
+.kids-care-grid p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .process {
   padding-top: 10px;
 }
 
 .process-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -1061,6 +1165,35 @@ textarea {
   font-weight: 800;
 }
 
+.doctor-achievements {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.doctor-achievements article {
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.doctor-achievements strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--navy);
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 0.92rem;
+}
+
+.doctor-achievements p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
 .testimonial-grid article {
   padding: 20px;
 }
@@ -1148,8 +1281,10 @@ textarea {
 
 .reveal,
 .service-card,
+.kids-care-grid article,
 .feature-grid article,
 .doctor-card,
+.doctor-achievements article,
 .testimonial-grid article,
 .process-grid article {
   opacity: 0;
@@ -1159,8 +1294,10 @@ textarea {
 
 .reveal.is-visible,
 .service-card.is-visible,
+.kids-care-grid article.is-visible,
 .feature-grid article.is-visible,
 .doctor-card.is-visible,
+.doctor-achievements article.is-visible,
 .testimonial-grid article.is-visible,
 .process-grid article.is-visible {
   opacity: 1;
@@ -1168,16 +1305,20 @@ textarea {
 }
 
 .service-card:nth-child(2),
+.kids-care-grid article:nth-child(2),
 .feature-grid article:nth-child(2),
 .doctor-card:nth-child(2),
+.doctor-achievements article:nth-child(2),
 .testimonial-grid article:nth-child(2),
 .process-grid article:nth-child(2) {
   transition-delay: 80ms;
 }
 
 .service-card:nth-child(3),
+.kids-care-grid article:nth-child(3),
 .feature-grid article:nth-child(3),
 .doctor-card:nth-child(3),
+.doctor-achievements article:nth-child(3),
 .testimonial-grid article:nth-child(3),
 .process-grid article:nth-child(3) {
   transition-delay: 140ms;
@@ -1241,7 +1382,9 @@ textarea {
 
   .service-grid,
   .feature-grid,
-  .process-grid {
+  .process-grid,
+  .kids-care-grid,
+  .doctor-achievements {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1267,6 +1410,7 @@ textarea {
   }
 
   .why,
+  .kids-focus,
   .split-row,
   .consultation,
   .contact-layout {
@@ -1377,6 +1521,8 @@ textarea {
   .why-points,
   .service-grid,
   .service-benefits,
+  .kids-care-grid,
+  .doctor-achievements,
   .feature-grid,
   .process-grid,
   .doctor-grid,
@@ -1407,6 +1553,20 @@ textarea {
 
   .service-benefits article:last-child {
     border-bottom: 0;
+  }
+
+  .kids-focus {
+    gap: 16px;
+  }
+
+  .kids-copy,
+  .kids-care-grid article {
+    padding: 20px;
+  }
+
+  .kids-actions {
+    align-items: stretch;
+    flex-direction: column;
   }
 
   .hero-form {
@@ -1605,8 +1765,10 @@ textarea {
 
   .reveal,
   .service-card,
+  .kids-care-grid article,
   .feature-grid article,
   .doctor-card,
+  .doctor-achievements article,
   .testimonial-grid article,
   .process-grid article {
     opacity: 1;
