@@ -98,6 +98,13 @@ div[id] {
   gap: 14px;
 }
 
+.brand-logo {
+  width: clamp(170px, 17vw, 248px);
+  height: auto;
+  max-height: 76px;
+  object-fit: contain;
+}
+
 .brand-mark {
   display: grid;
   width: 52px;
@@ -1397,6 +1404,12 @@ textarea {
   stroke: var(--gold);
 }
 
+.footer-brand .brand-logo {
+  width: min(230px, 100%);
+  background: #ffffff;
+  border-radius: 6px;
+}
+
 .map-card {
   display: grid;
   min-height: 96px;
@@ -1607,6 +1620,11 @@ textarea {
   .brand-mark {
     width: 38px;
     height: 46px;
+  }
+
+  .brand-logo {
+    width: 154px;
+    max-height: 50px;
   }
 
   .brand-text strong {
