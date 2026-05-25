@@ -1160,6 +1160,79 @@ textarea {
   font-size: 0.82rem;
 }
 
+.smile-gallery {
+  padding-top: 54px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.gallery-case {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(6, 38, 90, 0.08);
+}
+
+.case-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.case-head span {
+  color: var(--gold-dark);
+  font-weight: 800;
+}
+
+.case-head strong {
+  color: var(--navy);
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.before-after {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.before-after figure {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+  background: #ffffff;
+}
+
+.before-after img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--soft);
+}
+
+.before-after figcaption {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  padding: 5px 9px;
+  color: #ffffff;
+  background: rgba(3, 27, 67, 0.86);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
 .split-row {
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
@@ -1429,6 +1502,7 @@ textarea {
 .service-card,
 .kids-care-grid article,
 .feature-grid article,
+.gallery-case,
 .review-card,
 .doctor-card,
 .doctor-achievements article,
@@ -1443,6 +1517,7 @@ textarea {
 .service-card.is-visible,
 .kids-care-grid article.is-visible,
 .feature-grid article.is-visible,
+.gallery-case.is-visible,
 .review-card.is-visible,
 .doctor-card.is-visible,
 .doctor-achievements article.is-visible,
@@ -1455,6 +1530,7 @@ textarea {
 .service-card:nth-child(2),
 .kids-care-grid article:nth-child(2),
 .feature-grid article:nth-child(2),
+.gallery-case:nth-child(2),
 .review-card:nth-child(2),
 .doctor-card:nth-child(2),
 .doctor-achievements article:nth-child(2),
@@ -1466,6 +1542,7 @@ textarea {
 .service-card:nth-child(3),
 .kids-care-grid article:nth-child(3),
 .feature-grid article:nth-child(3),
+.gallery-case:nth-child(3),
 .review-card:nth-child(3),
 .doctor-card:nth-child(3),
 .doctor-achievements article:nth-child(3),
@@ -1476,6 +1553,7 @@ textarea {
 
 .service-card:nth-child(4),
 .feature-grid article:nth-child(4),
+.gallery-case:nth-child(4),
 .process-grid article:nth-child(4) {
   transition-delay: 200ms;
 }
@@ -1532,6 +1610,7 @@ textarea {
 
   .service-grid,
   .feature-grid,
+  .gallery-grid,
   .process-grid,
   .kids-care-grid,
   .doctor-achievements {
@@ -1685,6 +1764,7 @@ textarea {
   .doctor-achievements,
   .review-stats,
   .feature-grid,
+  .gallery-grid,
   .process-grid,
   .doctor-grid,
   .testimonial-grid,
@@ -1847,6 +1927,10 @@ textarea {
     height: 150px;
   }
 
+  .before-after img {
+    height: 190px;
+  }
+
   .doctor-photo {
     height: 190px;
   }
@@ -1949,6 +2033,7 @@ textarea {
   .service-card,
   .kids-care-grid article,
   .feature-grid article,
+  .gallery-case,
   .review-card,
   .doctor-card,
   .doctor-achievements article,

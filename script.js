@@ -1,5 +1,5 @@
 const revealItems = document.querySelectorAll(
-  ".reveal, .service-card, .kids-care-grid article, .process-grid article, .feature-grid article, .review-card, .doctor-card, .doctor-achievements article, .testimonial-grid article"
+  ".reveal, .service-card, .kids-care-grid article, .process-grid article, .feature-grid article, .gallery-case, .review-card, .doctor-card, .doctor-achievements article, .testimonial-grid article"
 );
 
 if ("IntersectionObserver" in window) {
