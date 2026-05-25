@@ -244,6 +244,12 @@ div[id] {
     url("assets/reviews/reviews-hero.png") center right / cover;
 }
 
+.gallery-page-hero {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.91) 52%, rgba(255, 255, 255, 0.36) 100%),
+    url("assets/gallery/case-01-after.jpeg") center right / cover;
+}
+
 .contact-page-hero {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 48%, rgba(255, 255, 255, 0.36) 100%),
@@ -1168,6 +1174,15 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.gallery-preview {
+  margin-bottom: 24px;
+}
+
+.gallery-actions {
+  display: flex;
+  justify-content: center;
 }
 
 .gallery-case {
