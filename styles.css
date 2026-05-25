@@ -147,9 +147,9 @@ div[id] {
 }
 
 .nav {
-  gap: clamp(18px, 3vw, 48px);
+  gap: clamp(12px, 2.1vw, 34px);
   color: var(--navy);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
   font-weight: 700;
 }
 
@@ -229,6 +229,12 @@ div[id] {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 48%, rgba(255, 255, 255, 0.36) 100%),
     url("assets/clinic-hero-opt.jpg") center right / cover;
+}
+
+.reviews-page-hero {
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.92) 52%, rgba(255, 255, 255, 0.4) 100%),
+    url("assets/reviews/reviews-hero.png") center right / cover;
 }
 
 .contact-page-hero {
@@ -1230,6 +1236,97 @@ textarea {
   box-shadow: 0 14px 34px rgba(6, 38, 90, 0.07);
 }
 
+.review-showcase {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 48px);
+  align-items: center;
+}
+
+.review-showcase-copy {
+  padding: clamp(24px, 4vw, 42px);
+  color: #ffffff;
+  background:
+    linear-gradient(135deg, rgba(3, 27, 67, 0.97), rgba(6, 38, 90, 0.94)),
+    var(--navy-dark);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.review-showcase-copy h2 {
+  color: #ffffff;
+}
+
+.review-showcase-copy p:not(.eyebrow) {
+  color: #dbe6f5;
+  line-height: 1.7;
+}
+
+.review-showcase > img {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 18px 44px rgba(6, 38, 90, 0.12);
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.review-stats article {
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+}
+
+.review-stats strong,
+.review-stats span {
+  display: block;
+}
+
+.review-stats strong {
+  color: #ffffff;
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 1.15rem;
+}
+
+.review-stats span {
+  margin-top: 4px;
+  color: #dbe6f5;
+  font-size: 0.78rem;
+  line-height: 1.35;
+}
+
+.reviews-wall-section {
+  padding-top: 16px;
+}
+
+.review-wall {
+  column-count: 3;
+  column-gap: 18px;
+}
+
+.review-card {
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 10px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(6, 38, 90, 0.08);
+  break-inside: avoid;
+}
+
+.review-card img {
+  width: 100%;
+  border-radius: 7px;
+}
+
 .testimonial-grid article {
   padding: 20px;
 }
@@ -1319,6 +1416,7 @@ textarea {
 .service-card,
 .kids-care-grid article,
 .feature-grid article,
+.review-card,
 .doctor-card,
 .doctor-achievements article,
 .testimonial-grid article,
@@ -1332,6 +1430,7 @@ textarea {
 .service-card.is-visible,
 .kids-care-grid article.is-visible,
 .feature-grid article.is-visible,
+.review-card.is-visible,
 .doctor-card.is-visible,
 .doctor-achievements article.is-visible,
 .testimonial-grid article.is-visible,
@@ -1343,6 +1442,7 @@ textarea {
 .service-card:nth-child(2),
 .kids-care-grid article:nth-child(2),
 .feature-grid article:nth-child(2),
+.review-card:nth-child(2),
 .doctor-card:nth-child(2),
 .doctor-achievements article:nth-child(2),
 .testimonial-grid article:nth-child(2),
@@ -1353,6 +1453,7 @@ textarea {
 .service-card:nth-child(3),
 .kids-care-grid article:nth-child(3),
 .feature-grid article:nth-child(3),
+.review-card:nth-child(3),
 .doctor-card:nth-child(3),
 .doctor-achievements article:nth-child(3),
 .testimonial-grid article:nth-child(3),
@@ -1424,6 +1525,10 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .review-wall {
+    column-count: 2;
+  }
+
   .service-card,
   .service-card:nth-child(5),
   .service-card:nth-child(6),
@@ -1447,6 +1552,7 @@ textarea {
 
   .why,
   .kids-focus,
+  .review-showcase,
   .split-row,
   .consultation,
   .contact-layout {
@@ -1559,6 +1665,7 @@ textarea {
   .service-benefits,
   .kids-care-grid,
   .doctor-achievements,
+  .review-stats,
   .feature-grid,
   .process-grid,
   .doctor-grid,
@@ -1608,6 +1715,22 @@ textarea {
   .kids-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .review-showcase {
+    gap: 16px;
+  }
+
+  .review-showcase-copy {
+    padding: 20px;
+  }
+
+  .review-wall {
+    column-count: 1;
+  }
+
+  .review-card {
+    padding: 8px;
   }
 
   .hero-form {
@@ -1808,6 +1931,7 @@ textarea {
   .service-card,
   .kids-care-grid article,
   .feature-grid article,
+  .review-card,
   .doctor-card,
   .doctor-achievements article,
   .testimonial-grid article,
