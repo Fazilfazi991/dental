@@ -2,6 +2,40 @@ const revealItems = document.querySelectorAll(
   ".reveal, .service-card, .kids-care-grid article, .process-grid article, .feature-grid article, .gallery-case, .review-card, .doctor-card, .doctor-achievements article, .testimonial-grid article"
 );
 
+const siteHeader = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const primaryNav = document.querySelector(".nav");
+
+if (siteHeader && menuToggle && primaryNav) {
+  const setMenuState = (isOpen) => {
+    siteHeader.classList.toggle("menu-open", isOpen);
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  };
+
+  menuToggle.addEventListener("click", () => {
+    setMenuState(!siteHeader.classList.contains("menu-open"));
+  });
+
+  primaryNav.addEventListener("click", (event) => {
+    if (event.target.closest("a")) {
+      setMenuState(false);
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (siteHeader.classList.contains("menu-open") && !siteHeader.contains(event.target)) {
+      setMenuState(false);
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      setMenuState(false);
+    }
+  });
+}
+
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver(
     (entries) => {
