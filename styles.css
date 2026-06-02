@@ -1298,6 +1298,32 @@ textarea {
   gap: 36px;
 }
 
+.experts-feedback {
+  width: min(1500px, calc(100% - 40px));
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(42px, 5vw, 76px);
+  padding: clamp(42px, 5vw, 58px);
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(6, 38, 90, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 24px 70px rgba(6, 38, 90, 0.07);
+}
+
+.experts-feedback .section-title {
+  margin-bottom: 26px;
+}
+
+.experts-feedback .section-title p:not(.eyebrow) {
+  max-width: none;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: clamp(0.96rem, 1.3vw, 1.12rem);
+}
+
+.experts-feedback .section-title h2 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+}
+
 .doctor-grid,
 .testimonial-grid {
   display: grid;
@@ -1305,22 +1331,112 @@ textarea {
   gap: 14px;
 }
 
+.home-doctor-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
 .home-review-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 18px;
 }
 
-.home-review-grid .review-card {
+.home-review-card {
+  min-width: 0;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 14px 34px rgba(6, 38, 90, 0.06);
+}
+
+.review-author {
   display: flex;
-  min-height: 245px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
 }
 
-.home-review-grid .review-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
+.review-avatar {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #405fc4, #7993e4);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.review-avatar.warm {
+  color: var(--navy);
+  background: #efe3d6;
+}
+
+.review-avatar.cool {
+  color: var(--navy);
+  background: #d8e5f5;
+}
+
+.review-author strong {
+  display: block;
+  color: var(--navy);
+  font-family: "Space Grotesk", Arial, sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.review-author small,
+.review-stars small {
+  display: block;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.review-stars {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.review-stars span {
+  color: var(--gold);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+}
+
+.home-review-card p {
+  position: relative;
+  margin: 0;
+  color: #222c3d;
+  font-size: 0.96rem;
+  line-height: 1.72;
+}
+
+.home-review-card p::before,
+.home-review-card p::after {
+  display: block;
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.home-review-card p::before {
+  content: open-quote;
+  margin-bottom: 4px;
+}
+
+.home-review-card p::after {
+  content: close-quote;
+  margin-top: 8px;
+  text-align: right;
 }
 
 .doctor-photo {
@@ -1338,6 +1454,33 @@ textarea {
   color: var(--navy);
   font-size: 0.86rem;
   font-weight: 800;
+}
+
+.experts-feedback .doctor-card {
+  padding: 18px;
+  border-radius: 10px;
+}
+
+.experts-feedback .doctor-card h3 {
+  font-size: clamp(1.18rem, 1.8vw, 1.42rem);
+  line-height: 1.18;
+}
+
+.experts-feedback .doctor-card p {
+  color: var(--gold-dark);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.experts-feedback .doctor-card small {
+  display: block;
+  font-size: 0.92rem;
+}
+
+.experts-feedback .doctor-photo {
+  height: 230px;
+  border-radius: 8px;
 }
 
 .doctor-achievements {
@@ -1579,6 +1722,7 @@ textarea {
 .feature-grid article,
 .gallery-case,
 .review-card,
+.home-review-card,
 .doctor-card,
 .doctor-achievements article,
 .testimonial-grid article,
@@ -1594,6 +1738,7 @@ textarea {
 .feature-grid article.is-visible,
 .gallery-case.is-visible,
 .review-card.is-visible,
+.home-review-card.is-visible,
 .doctor-card.is-visible,
 .doctor-achievements article.is-visible,
 .testimonial-grid article.is-visible,
@@ -1607,6 +1752,7 @@ textarea {
 .feature-grid article:nth-child(2),
 .gallery-case:nth-child(2),
 .review-card:nth-child(2),
+.home-review-card:nth-child(2),
 .doctor-card:nth-child(2),
 .doctor-achievements article:nth-child(2),
 .testimonial-grid article:nth-child(2),
@@ -1619,6 +1765,7 @@ textarea {
 .feature-grid article:nth-child(3),
 .gallery-case:nth-child(3),
 .review-card:nth-child(3),
+.home-review-card:nth-child(3),
 .doctor-card:nth-child(3),
 .doctor-achievements article:nth-child(3),
 .testimonial-grid article:nth-child(3),
@@ -1742,12 +1889,17 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .experts-feedback {
+    grid-template-columns: 1fr;
+    padding: 34px 24px;
+  }
+
   .home-review-grid {
     grid-template-columns: 1fr;
   }
 
-  .home-review-grid .review-card {
-    min-height: 0;
+  .home-review-card {
+    padding: 22px;
   }
 
   .review-wall {
