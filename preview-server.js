@@ -19,12 +19,16 @@ const types = {
 const server = http.createServer((req, res) => {
   const requestPath = decodeURIComponent(new URL(req.url, `http://${host}:${port}`).pathname);
   const safePath = path.normalize(requestPath).replace(/^[/\\]+/, "").replace(/^(\.\.[/\\])+/, "");
-  const filePath = path.resolve(root, safePath === "" ? "index.html" : safePath);
+  let filePath = path.resolve(root, safePath === "" ? "index.html" : safePath);
 
   if (!filePath.toLowerCase().startsWith(root.toLowerCase())) {
     res.writeHead(403);
     res.end("Forbidden");
     return;
+  }
+
+  if (fs.existsSync(filePath) && fs.statSync(filePath).isDirectory()) {
+    filePath = path.join(filePath, "index.html");
   }
 
   fs.readFile(filePath, (error, data) => {

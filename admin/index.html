@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Gallery Admin | Dentiva Dental Clinic</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="admin-page">
+    <header class="admin-header">
+      <a class="brand" href="/index.html" aria-label="Dentiva Dental Clinic home">
+        <img class="brand-logo" src="/assets/dentiva-logo.png" alt="Dentiva Dental Clinic" />
+      </a>
+      <div>
+        <span class="admin-mode">Local setup mode</span>
+        <a class="button secondary" href="/gallery.html">View Smile Gallery</a>
+      </div>
+    </header>
+
+    <main class="admin-shell">
+      <section class="admin-intro">
+        <p class="eyebrow">Gallery Admin</p>
+        <h1>Manage smile transformations.</h1>
+        <p>Add a paired before-and-after case or upload one combined result image.</p>
+      </section>
+
+      <section class="admin-layout">
+        <form class="admin-panel admin-form" id="gallery-upload-form">
+          <div class="admin-panel-head">
+            <div>
+              <p class="eyebrow">New Case</p>
+              <h2>Add Gallery Images</h2>
+            </div>
+            <span class="admin-step">01</span>
+          </div>
+
+          <label>
+            Case title
+            <input type="text" name="title" value="Smile Transformation" maxlength="80" required />
+          </label>
+
+          <fieldset class="layout-selector">
+            <legend>Image format</legend>
+            <label><input type="radio" name="layout" value="pair" checked /> Before and after</label>
+            <label><input type="radio" name="layout" value="combined" /> Combined image</label>
+          </fieldset>
+
+          <div class="upload-fields" data-upload-mode="pair">
+            <label class="file-field">
+              <span>Before image</span>
+              <input type="file" name="beforeImage" accept="image/png,image/jpeg,image/webp" />
+              <small>PNG, JPG or WebP</small>
+            </label>
+            <label class="file-field">
+              <span>After image</span>
+              <input type="file" name="afterImage" accept="image/png,image/jpeg,image/webp" />
+              <small>PNG, JPG or WebP</small>
+            </label>
+          </div>
+
+          <div class="upload-fields" data-upload-mode="combined" hidden>
+            <label class="file-field full-upload">
+              <span>Combined before-and-after image</span>
+              <input type="file" name="combinedImage" accept="image/png,image/jpeg,image/webp" />
+              <small>Use one image containing both treatment states.</small>
+            </label>
+          </div>
+
+          <div class="admin-form-actions">
+            <button class="button primary" type="submit">Publish to Gallery</button>
+            <button class="button secondary" type="reset">Clear</button>
+          </div>
+          <p class="admin-status" id="admin-status" role="status"></p>
+        </form>
+
+        <section class="admin-panel admin-preview-panel">
+          <div class="admin-panel-head">
+            <div>
+              <p class="eyebrow">Preview</p>
+              <h2>Case Preview</h2>
+            </div>
+            <span class="admin-step">02</span>
+          </div>
+          <div class="admin-preview" id="case-preview">
+            <p>Select images to preview the gallery card.</p>
+          </div>
+        </section>
+      </section>
+
+      <section class="admin-panel admin-library">
+        <div class="admin-panel-head">
+          <div>
+            <p class="eyebrow">Published Locally</p>
+            <h2>Managed Cases</h2>
+          </div>
+          <span class="admin-count" id="managed-count">0 cases</span>
+        </div>
+        <div class="admin-case-list" id="managed-case-list">
+          <p class="admin-empty">No locally managed cases yet.</p>
+        </div>
+      </section>
+
+      <aside class="admin-notice">
+        This admin currently stores images in this browser. Supabase authentication and shared cloud storage will be connected later.
+      </aside>
+    </main>
+
+    <script src="/gallery-manager.js"></script>
+    <script src="/admin/admin.js"></script>
+  </body>
+</html>
