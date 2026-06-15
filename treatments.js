@@ -1,48 +1,66 @@
 const dentivaTreatments = [
   {
+    category: "Aligners",
     title: "Invisalign / Aligners",
-    description: "Clear, comfortable aligners that gently straighten your teeth discreetly.",
+    description:
+      "Invisalign is made of clear aligners instead of fixed brackets and wire braces. It provides an almost invisible orthodontic alternative to traditional metal appliances and helps gently move teeth into better alignment.",
     image: "assets/treatment-aligners.png",
   },
   {
+    category: "Retainers",
     title: "Hawleys / Essix Retainers",
-    description: "Custom-made retainers that keep your teeth in their new, perfect position.",
-    image: "assets/dentiva-hero-patient-opt.jpg",
+    description:
+      "A teeth retainer is a custom-made device worn over the teeth. It helps keep the teeth in their new and correct position after braces or aligner treatment.",
+    image: "assets/gallery/case-01-before.png",
   },
   {
+    category: "Everbrite",
     title: "Teeth Whitening",
-    description: "Safe and effective whitening for a visibly brighter, more confident smile.",
+    description:
+      "Teeth whitening, also called teeth bleaching, is a simple and safe process that uses bleaching agents such as hydrogen peroxide or carbamide peroxide to lighten tooth color and improve smile brightness.",
     image: "assets/treatment-whitening.png",
   },
   {
+    category: "Veneers",
     title: "Veneers / Laminates",
-    description: "Ultra-thin shells that improve the color, shape and overall appearance of teeth.",
+    description:
+      "Dental veneers are wafer-thin, custom-made shells of tooth-colored material designed to cover the front surface of teeth. They help improve the appearance of teeth by changing their color, shape, size, or length.",
     image: "assets/treatment-veneers.png",
   },
   {
+    category: "Removable Appliance / Prosthesis",
     title: "Dentures",
-    description: "High-quality removable dentures for natural function and confident smiles.",
+    description:
+      "Dentures are artificial replacements for one or several teeth, or all teeth. They can be partial dentures or full dentures and are used to restore chewing function, appearance, and confidence.",
     image: "assets/treatment-implants.png",
   },
   {
+    category: "Oral Prophylaxis",
     title: "Cleaning & Polishing",
-    description: "Professional cleaning to remove plaque, stains and keep your teeth healthy.",
+    description:
+      "Cleaning and polishing is a procedure done to remove plaque, stains, and build-up from the surfaces of teeth, including hidden areas between teeth and under the gums. It helps maintain oral hygiene and keeps teeth healthier.",
     image: "assets/clinic-hero-opt.jpg",
   },
   {
+    category: "RCT",
     title: "Root Canal Treatment",
-    description: "Relieve pain and save your natural tooth with advanced root canal care.",
-    image: "assets/treatment-whitening.png",
-  },
-  {
-    title: "Tooth Extraction",
-    description: "Safe and gentle removal of damaged or problematic teeth.",
+    description:
+      "Root canal treatment is a dental procedure used to treat infection at the centre of a tooth. It is not usually painful and can help save a tooth that might otherwise have to be completely removed.",
     image: "assets/dentiva-hero-patient-opt.jpg",
   },
   {
+    category: "Extraction",
+    title: "Tooth Extraction",
+    description:
+      "Tooth extraction is a dental procedure where a tooth is completely removed from its socket. It may be needed when a tooth is badly damaged, infected, loose, or cannot be saved by other treatments.",
+    image: "assets/gallery/case-03-before.png",
+  },
+  {
+    category: "Tooth Restoration",
     title: "Tooth Filling / Restoration",
-    description: "Restore decayed or damaged teeth with natural-looking, durable fillings.",
-    image: "assets/treatment-veneers.png",
+    description:
+      "A dental filling is a procedure used to fill a hole or cavity in a tooth. You may need a filling if tooth structure is lost due to decay, trauma, or wear. It helps restore the tooth's shape, strength, and function.",
+    image: "assets/gallery/case-04-after.png",
   },
 ];
 
@@ -53,13 +71,13 @@ if (treatmentGrid) {
     .map(
       (treatment) => `
         <article class="treatment-modern-card reveal">
-          <a class="treatment-card-media" href="contact.html#appointment" aria-label="Learn more about ${treatment.title}">
+          <div class="treatment-card-media">
             <img src="${treatment.image}" alt="${treatment.title} at Dentiva Clinic" loading="lazy" />
-          </a>
+          </div>
           <div class="treatment-card-copy">
+            <span class="treatment-category">${treatment.category}</span>
             <h3>${treatment.title}</h3>
             <p>${treatment.description}</p>
-            <a class="treatment-link" href="contact.html#appointment">Learn More <span aria-hidden="true">-&gt;</span></a>
           </div>
         </article>
       `

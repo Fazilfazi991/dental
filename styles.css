@@ -2411,9 +2411,13 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
+  align-items: stretch;
 }
 
 .treatment-modern-card {
+  display: flex;
+  min-height: 540px;
+  flex-direction: column;
   overflow: hidden;
   background: #ffffff;
   border: 1px solid rgba(3, 2, 111, 0.1);
@@ -2429,8 +2433,8 @@ textarea {
 }
 
 .treatment-card-media {
-  display: block;
-  height: 190px;
+  flex: 0 0 auto;
+  height: 220px;
   overflow: hidden;
   background: #eef7f6;
 }
@@ -2447,42 +2451,41 @@ textarea {
 }
 
 .treatment-card-copy {
-  padding: 18px 20px 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px 24px 26px;
+}
+
+.treatment-category {
+  display: inline-flex;
+  align-self: flex-start;
+  max-width: 100%;
+  margin-bottom: 12px;
+  padding: 6px 11px;
+  color: var(--navy);
+  background: #ecfbf8;
+  border: 1px solid rgba(11, 140, 134, 0.16);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
 }
 
 .treatment-card-copy h3 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   color: var(--navy);
   font-family: "Space Grotesk", Roboto, Arial, sans-serif;
-  font-size: 1.12rem;
+  font-size: 1.2rem;
   line-height: 1.25;
 }
 
 .treatment-card-copy p {
-  min-height: 68px;
   margin: 0;
   color: #3f4964;
-  font-size: 0.93rem;
-  line-height: 1.55;
-}
-
-.treatment-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 16px;
-  color: var(--navy);
-  font-size: 0.86rem;
-  font-weight: 800;
-}
-
-.treatment-link span {
-  color: #0b8c86;
-  transition: transform 0.2s ease;
-}
-
-.treatment-link:hover span {
-  transform: translateX(3px);
+  font-size: 0.95rem;
+  line-height: 1.68;
 }
 
 .treatment-consultation {
@@ -3082,6 +3085,10 @@ textarea {
 
   .treatment-card-media {
     height: 205px;
+  }
+
+  .treatment-modern-card {
+    min-height: 0;
   }
 
   .treatment-card-copy p {
