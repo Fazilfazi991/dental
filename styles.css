@@ -1214,10 +1214,18 @@ textarea {
   padding-top: 54px;
 }
 
+.gallery-page-list {
+  width: min(1500px, calc(100% - 40px));
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
+}
+
+.gallery-page-list .gallery-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .gallery-preview {
@@ -2763,6 +2771,10 @@ textarea {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .gallery-page-list .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .experts-feedback {
     grid-template-columns: 1fr;
     padding: 34px 24px;
@@ -3022,6 +3034,10 @@ textarea {
   .testimonial-grid,
   .home-review-grid,
   .visit {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-page-list .gallery-grid {
     grid-template-columns: 1fr;
   }
 
