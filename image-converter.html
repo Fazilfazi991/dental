@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Converter | Dentiva Clinic</title>
+    <meta
+      name="description"
+      content="Upload an image and convert it to WebP, JPG, or PNG using Dentiva's image converter."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top-strip">
+      <span>BurJuman, Bur Dubai, Dubai</span>
+      <span>Mon - Sat: 9:00 AM - 8:00 PM</span>
+      <a href="tel:+971544777590">Call Now: +971 54 477 7590</a>
+      <a href="https://wa.me/971544777590">WhatsApp</a>
+      <a class="strip-cta" href="contact.html#appointment">Book Appointment</a>
+    </div>
+
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Dentiva Dental Clinic home">
+        <img class="brand-logo" src="assets/dentiva-logo.png" alt="Dentiva Dental Clinic" />
+      </a>
+      <nav class="nav" id="primary-navigation" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Treatments</a>
+        <a href="doctors.html">Our Dentists</a>
+        <a href="gallery.html">Smile Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main>
+      <section class="page-hero converter-page-hero">
+        <div>
+          <p class="eyebrow">Image Utility</p>
+          <h1>Convert images to WebP, JPG, or PNG.</h1>
+          <p>
+            Upload an image, choose the output format, and download an optimized copy processed
+            server-side with Sharp.
+          </p>
+        </div>
+      </section>
+
+      <section class="section converter-section reveal">
+        <form class="converter-panel" id="image-converter-form">
+          <div class="converter-upload">
+            <input id="converter-file" type="file" name="image" accept="image/png,image/jpeg,image/webp" required />
+            <label for="converter-file">
+              <strong>Upload Image</strong>
+              <span>PNG, JPG, JPEG, or WebP up to 14 MB</span>
+            </label>
+          </div>
+
+          <div class="converter-controls">
+            <label>
+              Convert to
+              <select name="format" id="converter-format">
+                <option value="webp">WebP</option>
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+              </select>
+            </label>
+            <label>
+              Quality
+              <input id="converter-quality" type="range" name="quality" min="40" max="100" value="82" />
+              <span id="quality-value">82%</span>
+            </label>
+          </div>
+
+          <div class="converter-preview" id="converter-preview">
+            <span>No image selected</span>
+          </div>
+
+          <div class="converter-actions">
+            <button class="button primary" type="submit">Convert Image</button>
+            <a class="button secondary converter-download" id="converter-download" hidden>Download Converted Image</a>
+          </div>
+          <p class="converter-status" id="converter-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <nav class="mobile-actions" aria-label="Mobile quick actions">
+      <a href="tel:+971544777590">Call</a>
+      <a href="https://wa.me/971544777590">WhatsApp</a>
+      <a href="contact.html#appointment">Book</a>
+    </nav>
+
+    <footer class="site-footer">
+      <p>(c) 2026 Dentiva Dental Clinic. All Rights Reserved.</p>
+      <p>Privacy Policy | Terms &amp; Conditions</p>
+    </footer>
+    <script src="image-converter.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
