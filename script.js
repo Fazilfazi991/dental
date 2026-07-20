@@ -77,3 +77,46 @@ if ("IntersectionObserver" in window && navTargets.length) {
 
   navTargets.forEach((target) => navObserver.observe(target));
 }
+
+const aboutLightbox = document.querySelector("#about-lightbox");
+
+if (aboutLightbox) {
+  const lightboxImage = aboutLightbox.querySelector("img");
+  const lightboxCaption = aboutLightbox.querySelector("figcaption");
+  const lightboxClose = aboutLightbox.querySelector(".about-lightbox-close");
+  let lightboxTrigger = null;
+
+  const closeLightbox = () => {
+    aboutLightbox.hidden = true;
+    document.body.classList.remove("lightbox-open");
+    if (lightboxTrigger) {
+      lightboxTrigger.focus();
+    }
+  };
+
+  document.querySelectorAll("[data-lightbox-src]").forEach((button) => {
+    button.addEventListener("click", () => {
+      lightboxTrigger = button;
+      lightboxImage.src = button.dataset.lightboxSrc;
+      lightboxImage.alt = button.dataset.lightboxAlt || "";
+      lightboxCaption.textContent = button.dataset.lightboxAlt || "";
+      aboutLightbox.hidden = false;
+      document.body.classList.add("lightbox-open");
+      lightboxClose.focus();
+    });
+  });
+
+  lightboxClose.addEventListener("click", closeLightbox);
+
+  aboutLightbox.addEventListener("click", (event) => {
+    if (event.target === aboutLightbox) {
+      closeLightbox();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !aboutLightbox.hidden) {
+      closeLightbox();
+    }
+  });
+}
