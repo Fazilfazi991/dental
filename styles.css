@@ -1910,6 +1910,11 @@ textarea {
   object-position: center;
 }
 
+.gallery-case-show-full .single-result img {
+  height: 440px;
+  object-fit: contain;
+}
+
 .split-row {
   display: grid;
   grid-template-columns: 1.08fr 0.92fr;
